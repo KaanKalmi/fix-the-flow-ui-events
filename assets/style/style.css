@@ -82,20 +82,22 @@ a:nth-child(1) {
 .shaker {
   animation-name: shaker;
   animation-timing-function: cubic-bezier(0.28, 0.84, 0.42, 1);
-  animation-duration: 1s;
-  animation-iteration-count: 1;
+  animation-duration: .1s;
+  animation-iteration-count: 8;
 }
 
 @keyframes shaker {
-  0% {transform: rotate(0deg);}
-  12.5% {transform: rotate(5deg);}
-  25% {transform: rotate(15deg);}
-  37.5% {transform: rotate(5deg);}
-  50% {transform: rotate(0deg);}
-  62.5% {transform: rotate(-5deg);}
-  75% {transform: rotate(-15deg);}
-  87.5% {transform: rotate(-5deg);}
-  100% {transform: rotate(0deg);}
+  0% {transform: translate(0);}
+  10% {transform: translate(-15px, -15px);}
+  20% {transform: translate(15px, -15px);}
+  30% {transform: translate(-15px, 15px);}
+  40% {transform: translate(15px, 15px);}
+  50% {transform: translate(-15px, -15px);}
+  60% {transform: translate(15px, -15px);}
+  70% {transform: translate(-15px, 15px);}
+  80% {transform: translate(-15px, -15px);}
+  90% {transform: translate(15px, -15px);}
+  100% {transform: translate(0);}
 }
 
 a:nth-child(2) {
@@ -109,8 +111,8 @@ a:nth-child(2) {
 .wobbler {
   animation-name: wobbler;
   animation-timing-function: ease-in-out;
-  animation-duration: 2s;
-  animation-iteration-count: 1;
+  animation-duration: .1s;
+  animation-iteration-count: 8;
 }
 
 @keyframes wobbler {
@@ -123,7 +125,7 @@ a:nth-child(2) {
   100% {transform: translateX(0%);}
 }
 
-/*animation*/
+/*blinking*/
 
 a:nth-child(3) {
   position: relative;
@@ -135,14 +137,39 @@ a:nth-child(3) {
 .blinker {
   animation-name: blinker;
   animation-timing-function: ease-in-out;
-  animation-duration: .5s;
-  animation-iteration-count: 2;
+  animation-duration: .1s;
+  animation-iteration-count: 8;
 }
 
 @keyframes blinker {
-  0% {opacity: 1;}
-  25% {opacity: .5;}
-  50% {opacity: 1;}
-  75% {opacity: .5;}
-  100% {opacity: 1;}
+  0% {opacity: 1; background-color: var(--highlight-secondary); border-color: var(--highlight-secondary); filter: brightness(200%);}
+  25% {opacity: 0;}
+  50% {opacity: 1; background-color: var(--highlight-secondary); border-color: var(--highlight-secondary); filter: brightness(200%);}
+  75% {opacity: 0;}
+  100% {opacity: 1; background-color: var(--highlight-secondary); border-color: var(--highlight-secondary); filter: brightness(200%);}
+}
+
+/*rubberbanding*/
+a:nth-child(4){
+  position: relative;
+  background: var(--highlight-primary);
+  color: var(--secondary);
+  border-color: var(--highlight-primary);
+
+}
+.rubberbanding{
+  animation-name: rubberbanding;
+  animation-timing-function: ease-in-out;
+  animation-duration: .1s;
+  animation-iteration-count: 8;
+
+}
+@keyframes rubberbanding {
+  0%{transform: scaleX(1);}
+  40%{transform: scaleX(1.4) scaleY(0.25);}
+  55%{transform: scaleX(0.25) scaleY(1.4);}
+  65%{transform: scaleX(1.4) scaleY(0.25);}
+  75%{transform: scaleX(0.25)  scaleY(1.4);}
+  90%{transform: scaleX(1.4) scaleY(0.25);}
+  100%{transform: scaleX(1) scaleY(1);}
 }

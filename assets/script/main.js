@@ -33,3 +33,11 @@ blink.addEventListener('animationend', blinker)
 function blinker() {
   blink.classList.toggle('blinker')
 } 
+
+let rubberband = document.querySelector('a:nth-of-type(4)')
+rubberband.addEventListener('click', rubberbanding)
+rubberband.addEventListener('animationend', rubberbanding)
+
+function rubberbanding() {
+  rubberband.classList.toggle('rubberbanding')
+}
