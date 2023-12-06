@@ -42,10 +42,10 @@ function rubberbanding() {
   rubberband.classList.toggle('rubberbanding')
 }
 
-let faded = document.querySelector('a:nth-of-child:(5)')
-faded.addEventListener('click',faded)
-faded.addEventListener('animationend',faded)
+let trip = document.querySelector('a:nth-of-type(5)')
+trip.addEventListener('click', tripping)
+trip.addEventListener('animationend', tripping)
 
-function faded(){
-faded.classList.toggle('faded')
+function tripping() {
+  trip.classList.toggle('tripping')
 }
