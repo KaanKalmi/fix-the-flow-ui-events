@@ -9,48 +9,48 @@ function shaker() {
   shake.classList.toggle('shaker') // toggles the class shaker
 } 
 
-let wobble = document.querySelector('a:nth-of-type(2)') // selects the 2nd a tag
+let alarm = document.querySelector('a:nth-of-type(2)') // selects the 2nd a tag
 
-console.log(wobble)  // shows in console
+console.log(alarm)  // shows in console
 
-wobble.addEventListener('click', wobbler)  // listens for click
-wobble.addEventListener('animationend', wobbler) // listens for animation end
+alarm.addEventListener('click', wobbler)  // listens for click
+alarm.addEventListener('animationend', wobbler) // listens for animation end
 
 function wobbler() {
-  wobble.classList.toggle('wobbler') // toggles the class wobbler
+  alarm.classList.toggle('wobbler') // toggles the class wobbler
 } 
 
-let epileptic = document.querySelector('a:nth-of-type(3)') // selects the 3rd a tag
+let bikelight = document.querySelector('a:nth-of-type(3)') // selects the 3rd a tag
  
-console.log(epileptic) // shows in console
+console.log(bikelight) // shows in console
 
-epileptic.addEventListener('click', blinker)  // listens for click
-epileptic.addEventListener('animationend', blinker) // listens for animation end
+bikelight.addEventListener('click', blinker)  // listens for click
+bikelight.addEventListener('animationend', blinker) // listens for animation end
 
 function blinker() {
-  epileptic.classList.toggle('blinker') // toggles the class blinker
+  bikelight.classList.toggle('blinker') // toggles the class blinker
 } 
 
-let ecstatic = document.querySelector('a:nth-of-type(4)') // selects the 4th a tag
+let luffy = document.querySelector('a:nth-of-type(4)') // selects the 4th a tag
 
-console.log(ecstatic) // shows in console
+console.log(luffy) // shows in console
 
-ecstatic.addEventListener('click', rubberbanding)  // listens for click
-ecstatic.addEventListener('animationend', rubberbanding) // listens for animation end
+luffy.addEventListener('click', gomugomu)  // listens for click
+luffy.addEventListener('animationend', gomugomu) // listens for animation end
 
-function rubberbanding() {
-  ecstatic.classList.toggle('rubberbanding') // toggles the class rubberbanding
+function gomugomu() {
+  luffy.classList.toggle('gomugomu') // toggles the class rubberbanding
 }
 
 let trip = document.querySelector('a:nth-of-type(5)') // selects the 5th a tag
 
 console.log(trip) // shows in console
 
-trip.addEventListener('click', tripping) // listens for click
-trip.addEventListener('animationend', tripping) // listens for animation end
+trip.addEventListener('click', lowbattery) // listens for click
+trip.addEventListener('animationend', lowbattery) // listens for animation end
 
-function tripping() {
-  trip.classList.toggle('tripping') // toggles the class tripping
+function lowbattery() {
+  trip.classList.toggle('lowbattery') // toggles the class tripping
 }
 
 let bounce = document.querySelector('a:nth-of-type(6)') // selects the 6th a tag
@@ -110,7 +110,7 @@ function hello() {
 
 let abducted = document.querySelector('a:nth-of-type(11)') // selects the 11th a tag
 
-console.log(zoomzoom) // shows in console
+console.log(abducted) // shows in console
 
 abducted.addEventListener('click', rideOut) // listens for click
 abducted.addEventListener('animationend', rideOut) // listens for animation end
@@ -128,4 +128,37 @@ interaction.addEventListener('animationend', jumpHandler) // listens for animati
 
 function jumpHandler() { 
   interaction.classList.toggle('jump') // toggles the class jump
+}
+
+let roll = document.querySelector('a:nth-of-type(13)') // selects the 13th a tag
+
+console.log(roll) // shows in console
+
+roll.addEventListener('click', barrelroll) // listens for click
+roll.addEventListener('animationend', barrelroll) // listens for animation end
+
+function barrelroll() {
+  roll.classList.toggle('barrelroll') // toggles the class zoom
+}
+
+let zoom = document.querySelector('a:nth-of-type(14)') // selects the 14th a tag
+
+console.log(zoom) // shows in console
+
+zoom.addEventListener('click', wave) // listens for click
+zoom.addEventListener('animationend', wave) // listens for animation end
+
+function wave() {
+  zoom.classList.toggle('wave') // toggles the class zoom
+}
+
+let weee = document.querySelector('a:nth-of-type(15)') // selects the 15th a tag
+
+console.log(weee) // shows in console
+
+weee.addEventListener('click', swirl) // listens for click
+weee.addEventListener('animationend', swirl) // listens for animation end
+
+function swirl() {
+  weee.classList.toggle('swirl') // toggles the class spin
 }

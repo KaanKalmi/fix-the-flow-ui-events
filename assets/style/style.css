@@ -42,6 +42,7 @@ a:hover {
   border-color: var(--primary);
 }
 
+/*ANIMATIES*/
 
 a:nth-child(1) {
   position: relative;
@@ -51,24 +52,21 @@ a:nth-child(1) {
 }
 
 .shaker {
-  animation-name: shaker;
-  animation-timing-function: cubic-bezier(0.28, 0.84, 0.42, 1);
-  animation-duration: .1s;
-  animation-iteration-count: 8;
+  animation-name: shaker cubic-bezier(0.28, 0.84, 0.42, 1) .7s 1;
 }
 
 @keyframes shaker {
-  0% {transform: translate(0);}
-  10% {transform: translate(-15px, -15px);}
-  20% {transform: translate(15px, -15px);}
-  30% {transform: translate(-15px, 15px);}
-  40% {transform: translate(15px, 15px);}
-  50% {transform: translate(-15px, -15px);}
-  60% {transform: translate(15px, -15px);}
-  70% {transform: translate(-15px, 15px);}
-  80% {transform: translate(-15px, -15px);}
-  90% {transform: translate(15px, -15px);}
-  100% {transform: translate(0);}
+  0% { transform: translate(0);}
+  10% { transform: translate(-5px, -5px); }
+  20% { transform: translate(5px, -5px); }
+  30% { transform: translate(-5px, 5px); }
+  40% { transform: translate(5px, 5px); }
+  50% { transform: translate(-5px, -5px); }
+  60% { transform: translate(5px, -5px); }
+  70% { transform: translate(-5px, 5px); }
+  80% { transform: translate(-5px, -5px); }
+  90% { transform: translate(5px, -5px); }
+  100% { transform: translate(0); }
 }
 
 a:nth-child(2) {
@@ -79,20 +77,17 @@ a:nth-child(2) {
 }
 
 .wobbler {
-  animation-name: wobbler;
-  animation-timing-function: ease-in-out;
-  animation-duration: .1s;
-  animation-iteration-count: 8;
+  animation-name: wobbler ease-in-out .6s 3;
 }
 
 @keyframes wobbler {
-  0% {transform: translateX(0%);}
-  15% {transform: translateX(-25%) rotate(-5deg);}
-  30% {transform: translateX(20%) rotate(3deg);}
-  45% {transform: translateX(-15%) rotate(-3deg);}
-  60% {transform: translateX(10%) rotate(2deg);}
-  75% {transform: translateX(-5%) rotate(-1deg);}
-  100% {transform: translateX(0%);}
+  0% { transform: translateX(0%); }
+  15% { transform: translateX(-20%) rotate(-5deg); }
+  30% { transform: translateX(15%) rotate(3deg); }
+  45% { transform: translateX(-10%) rotate(-3deg); }
+  60% { transform: translateX(5%) rotate(2deg); }
+  75% { transform: translateX(-2%) rotate(-1deg); }
+  100% { transform: translateX(0%); }
 }
 
 a:nth-child(3) {
@@ -103,18 +98,15 @@ a:nth-child(3) {
 }
 
 .blinker {
-  animation-name: blinker;
-  animation-timing-function: linear;
-  animation-duration: .001s;
-  animation-iteration-count: 2500;
+  animation-name: blinker linear .25s 3;
 }
 
 @keyframes blinker {
-  0% {opacity: 1; filter: brightness(200%); transform: translate(-15px, 15px);}
+  0% {opacity: 1; filter: brightness(200%);;}
   25% {opacity: 0;}
   50% {opacity: 1;  filter: brightness(200%);}
   75% {opacity: 0;}
-  100% {opacity: 1; filter: brightness(200%); transform: translate(15px, -15px);}
+  100% {opacity: 1; filter: brightness(200%);;}
 }
 
 a:nth-child(4){
@@ -124,21 +116,17 @@ a:nth-child(4){
   border-color: var(--highlight-primary);
 
 }
-.rubberbanding{
-  animation-name: rubberbanding;
-  animation-timing-function: ease-in-out;
-  animation-duration: .1s;
-  animation-iteration-count: 8;
-
+.gomugomu{
+  animation-name: gomugomu ease-in-out .6s 1;
 }
-@keyframes rubberbanding {
-  0%{transform: scaleX(1);}
-  40%{transform: scaleX(1.4) scaleY(0.25);}
-  55%{transform: scaleX(0.25) scaleY(1.4);}
-  65%{transform: scaleX(1.4) scaleY(0.25);}
-  75%{transform: scaleX(0.25)  scaleY(1.4);}
-  90%{transform: scaleX(1.4) scaleY(0.25);}
-  100%{transform: scaleX(1) scaleY(1);}
+
+@keyframes gomugomu {
+  0%{ transform: scaleX(1);}
+  40%{ transform: scaleX(1.4) scaleY(0.25); }
+  50%{ transform: scaleX(0.25) scaleY(1.4); }
+  60%{ transform: scaleX(1.4) scaleY(0.25); }
+  85%{ transform: scaleX(0.25)  scaleY(1.4); }
+  100%{ transform: scaleX(1) scaleY(1); }
 }
 
 a:nth-child(5){
@@ -148,17 +136,14 @@ color:var(--secondary);
 border-color:var(--highlight-primary);
 }
 
-.tripping{
-animation-name:tripping;
-animation-timing-function:ease-out;
-animation-duration:.01s;
-animation-iteration-count:100;
+.lowbattery{
+animation-name:lowbattery ease-in-out .6s 3;
 }
 
-@keyframes tripping{
-0%{filter: brightness(100%); transform:skew(120deg);}
-50%{filter: brightness(50%); transform:skew(0deg);}
-100%{filter: brightness(0); transform:skew(120deg);}
+@keyframes lowbattery{
+0%{filter: brightness(100%); transform:skew(18deg);}
+50%{filter: brightness(25%); transform:skew(-18deg);}
+100%{filter: brightness(100%); transform:skew(18deg);}
 }
 
 a:nth-child(6){
@@ -169,34 +154,15 @@ a:nth-child(6){
 }
 
 .bouncer{
-  animation-name: bouncer;
-  animation-timing-function: ease-in-out;
-  animation-duration: 1.2s;
-  animation-iteration-count: 3;
+  animation-name: bouncer ease-in-out 1.2s 3;
 }
 
 @keyframes bouncer {
-  from {
-    transform: scale(1);
-    transform-origin: center center;
-    animation-timing-function: ease-out;
-  }
-  10% {
-    transform: scale(0.91);
-    animation-timing-function: ease-in;
-  }
-  17% {
-    transform: scale(0.98);
-    animation-timing-function: ease-out;
-  }
-  33% {
-    transform: scale(0.87);
-    animation-timing-function: ease-in;
-  }
-  45% {
-    transform: scale(1);
-    animation-timing-function: ease-out;
-  }
+  from { transform: scale(1); transform-origin: center center; animation-timing-function: ease-out; }
+  10% {transform: scale(0.91);animation-timing-function: ease-in; }
+  17% { transform: scale(0.98); animation-timing-function: ease-out; }
+  33% { transform: scale(0.87); animation-timing-function: ease-in; }
+  45% { transform: scale(1); animation-timing-function: ease-out; }
 }
 
 a:nth-child(7){
@@ -207,13 +173,13 @@ a:nth-child(7){
 }
 
 .rotate{
-  animation:rotate .6s ease-in-out 2 alternate both
+  animation:rotate .6s ease-in-out 2 alternate both;
 }
 
 @keyframes rotate
 {
-  0%{transform:rotate(0)}
-  100%{transform:rotate(360deg)}
+  0%{ transform:rotate(0) }
+  100%{ transform:rotate(360deg) }
 }
 
 a:nth-child(8){
@@ -224,14 +190,14 @@ a:nth-child(8){
 }
 
 .disappear{
-  animation: disappear 1s ease-in-out 1
+  animation: disappear 1s ease-in-out 1;
 }
 
 @keyframes disappear
 {
-  0%{opacity:1}
-  15% {opacity: 1;}
-  100%{opacity:0}
+  0%{opacity:1} 
+  15% {opacity: 1;} 
+  100%{opacity:0} 
 }
 
 a:nth-child(9){
@@ -242,17 +208,12 @@ a:nth-child(9){
 }
 
 .blurredout{
-  animation: blurredout 1s ease-in-out 1
+  animation: blurredout 1s ease-in-out 1;
 }
 
 @keyframes blurredout {
-  0% {
-    filter: blur(0.01);
-  }
-  100% {
-    letter-spacing: -0.5em;
-    filter: blur(12px) opacity(0%);
-  }
+  0% { filter: blur(0.01); }
+  100% { letter-spacing: -0.5em; filter: blur(12px) opacity(0%); }
 }
 
 a:nth-child(10){
@@ -263,25 +224,19 @@ a:nth-child(10){
 }
 
 .hello{
-  animation: hello 1s ease-in-out 1
+  animation: hello 1s ease-in-out 1;
 }
 
 @keyframes hello {
-  0% {
-    filter: blur(12px);
-    opacity: 0;
-  }
-  100% {
-    filter: blur(0px);
-    opacity: 1;
-  }
+  0% { filter: blur(12px); opacity: 0; }
+  100% { filter: blur(0px); opacity: 1; }
 }
 
 a:nth-child(11){
   position: relative;
-  background: var(--highlight-primary);
+  background: var(--highlight-secondary);
   color: var(--secondary);
-  border-color: var(--highlight-primary);
+  border-color: var(--highlight-secondary);
 }
 
 .rideOut {
@@ -289,14 +244,8 @@ a:nth-child(11){
 }
 
 @keyframes rideOut {
-  0% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(-1000px);
-    opacity: 0;
-  }
+  0% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(-1000px); opacity: 0; }
 }
 
 a:nth-of-type(12) {
@@ -307,18 +256,102 @@ a:nth-of-type(12) {
 }
 
 .jump {
-  animation-name: jump;
-  animation-timing-function: cubic-bezier(0.28, 0.84, 0.42, 1);
-  animation-duration: 1.2s;
-  animation-iteration-count: 1;
+  animation-name: jump cubic-bezier(0.28, 0.84, 0.42, 1) 1.2s 1;
 }
 
 @keyframes jump {
-  0% {transform: scale(1, 1) translateY(0);}
-  10% {transform: scale(1.1, 0.9) translateY(0);}
-  30% {transform: scale(0.9, 1.1) translateY(-5rem) rotate(10deg);}
-  50% {transform: scale(1.05, 0.95) translateY(0);}
-  57% {transform: scale(1, 1) translateY(-0.5rem) rotate(-2deg);}
-  64% {transform: scale(1, 1) translateY(0);}
-  100% {transform: scale(1, 1) translateY(0);}
+  0% { transform: scale(1, 1) translateY(0);}
+  10% { transform: scale(1.1, 0.9) translateY(0);}
+  30% { transform: scale(0.9, 1.1) translateY(-5rem) rotate(10deg);}
+  50% { transform: scale(1.05, 0.95) translateY(0);}
+  57% { transform: scale(1, 1) translateY(-0.5rem) rotate(-2deg);}
+  64% { transform: scale(1, 1) translateY(0);}
+  100% { transform: scale(1, 1) translateY(0);}
+}
+
+a:nth-child(13){
+  position: relative;
+  background: var(--highlight-secondary);
+  color: var(--secondary);
+  border-color: var(--highlight-secondary);
+}
+
+.barrelroll {
+	animation-name: barrelroll 0.8s both;
+}
+
+@keyframes barrelroll {
+  0% { transform: translateX(0) rotate(0deg); opacity: 1; }
+  100% { transform: translateX(750px) rotate(540deg); opacity: 0; }
+}
+
+a:nth-child(14){
+  position: relative;
+  background: var(--highlight-secondary);
+  color: var(--secondary);
+  border-color: var(--highlight-secondary);
+}
+
+.wave {
+	animation-name: wave 1.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both 2;
+}
+
+@keyframes wave {
+  0%, 100% { transform: rotate(0deg); transform-origin: 0 50%; }
+  10% { transform: rotate(4deg); }
+  20%, 40%,60% { transform: rotate(-32deg); }
+  30%, 50%, 70% { transform: rotate(8deg); }
+  80% { transform: rotate(-4deg); }
+  90% { transform: rotate(4deg); }
+}
+
+a:nth-child(15){
+  position: relative;
+  background: var(--highlight-secondary);
+  color: var(--secondary);
+  border-color: var(--highlight-secondary);
+}
+
+.swirl {
+	animation: swirl 1s ease-in both;
+}
+
+@keyframes swirl {
+  0% { transform: rotate(0) scale(1); transform-origin: 100% 100%; opacity: 1; }
+  100% { transform: rotate(-540deg) scale(0); transform-origin: 100% 100%; opacity: 0; }
+}
+
+a:nth-child(16){
+  position: relative;
+  background: var(--highlight-secondary);
+  color: var(--secondary);
+  border-color: var(--highlight-secondary);
+}
+
+a:nth-child(17){
+  position: relative;
+  background: var(--highlight-secondary);
+  color: var(--secondary);
+  border-color: var(--highlight-secondary);
+}
+
+a:nth-child(18){
+  position: relative;
+  background: var(--highlight-secondary);
+  color: var(--secondary);
+  border-color: var(--highlight-secondary);
+}
+
+a:nth-child(19){
+  position: relative;
+  background: var(--primary);
+  color: var(--secondary);
+  border-color: var(--primary);
+}
+
+a:nth-child(20){
+  position: relative;
+  background: var(--primary);
+  color: var(--secondary);
+  border-color: var(--primary);
 }
