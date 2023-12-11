@@ -85,7 +85,7 @@ a:nth-child(n+19):nth-child(-n+20){
   60% { transform: translateX(5%) rotate(2deg); }  75% { transform: translateX(-2%) rotate(-1deg); } 
 }
 
-@keyframes blinker { 0% {opacity: 1; filter: brightness(200%);} 25% {opacity: 0;} 50% {opacity: 1;  filter: brightness(200%);} 75% {opacity: 0;} 100% {opacity: 1; filter: brightness(200%);;} }
+@keyframes blinker { 0% {opacity: 1; filter: brightness(200%);} 25% {opacity: 0;} 50% {opacity: 1;  filter: brightness(200%);} 75% {opacity: 0;} 100% {opacity: 1; filter: brightness(200%);} }
 
 @keyframes gomugomu {
   0%{ transform: scaleX(1);} 40%{ transform: scaleX(1.4) scaleY(0.25); } 50%{ transform: scaleX(0.25) scaleY(1.4); }
@@ -123,9 +123,8 @@ a:nth-child(n+19):nth-child(-n+20){
 @keyframes swirl { 0% { transform: rotate(0) scale(1); transform-origin: 100% 100%; opacity: 1; } 100% { transform: rotate(-540deg) scale(0); transform-origin: 100% 100%; opacity: 0; } }
 
 @keyframes pulled {0% { transform: translateY(0); animation-timing-function: ease-out; } 5% { transform: translateY(40px); animation-timing-function: ease-in; }
-  15% { transform: translateY(0); animation-timing-function: ease-out; } 25% { transform: translateY(90px); animation-timing-function: ease-in; }
-  38% { transform: translateY(0); animation-timing-function: ease-out;} 52% { transform: translateY(175px); animation-timing-function: ease-in; }
-  70% { transform: translateY(0); animation-timing-function: ease-out; } 85% { opacity: 1; } 100% { transform: translateY(1000px); animation-timing-function: ease-in; opacity: 0; }
+  15%,38%,70% { transform: translateY(0); animation-timing-function: ease-out; } 25% { transform: translateY(90px); animation-timing-function: ease-in; }
+  52% { transform: translateY(175px); animation-timing-function: ease-in; } 85% { opacity: 1; } 100% { transform: translateY(1000px); animation-timing-function: ease-in; opacity: 0; }
 }
 
 @keyframes michaeljackson { 0% { background:#9d7beb; border-color: #9d7beb; } 30%,100% { background:#7ce7c9; border-color: #7ce7c9; } }
