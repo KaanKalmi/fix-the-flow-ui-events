@@ -138,7 +138,7 @@ roll.addEventListener('click', barrelroll) // listens for click
 roll.addEventListener('animationend', barrelroll) // listens for animation end
 
 function barrelroll() {
-  roll.classList.toggle('barrelroll') // toggles the class zoom
+  roll.classList.toggle('barrelroll') // toggles the class barrelroll
 }
 
 let zoom = document.querySelector('a:nth-of-type(14)') // selects the 14th a tag
@@ -149,7 +149,7 @@ zoom.addEventListener('click', wave) // listens for click
 zoom.addEventListener('animationend', wave) // listens for animation end
 
 function wave() {
-  zoom.classList.toggle('wave') // toggles the class zoom
+  zoom.classList.toggle('wave') // toggles the class wave
 }
 
 let weee = document.querySelector('a:nth-of-type(15)') // selects the 15th a tag
@@ -160,5 +160,16 @@ weee.addEventListener('click', swirl) // listens for click
 weee.addEventListener('animationend', swirl) // listens for animation end
 
 function swirl() {
-  weee.classList.toggle('swirl') // toggles the class spin
+  weee.classList.toggle('swirl') // toggles the class swirl
+}
+
+let grappler = document.querySelector('a:nth-of-type(16)') // selects the 16th a tag
+
+console.log(grappler) // shows in console
+
+grappler.addEventListener('click', pulled) // listens for click
+grappler.addEventListener('animationend', pulled) // listens for animation end
+
+function pulled() {
+  grappler.classList.toggle('pulled') // toggles the class pulled
 }
