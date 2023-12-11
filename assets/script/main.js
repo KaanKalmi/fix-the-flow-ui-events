@@ -69,11 +69,38 @@ blubber.addEventListener('animationend', yuh)
 dbl.addEventListener('dblclick', colored)
 
 //listens for key press
-window.addEventListener('keydown', function() {
-    buttons.forEach(function(button) {
-        button.classList.toggle('colored'); //toggles class on and off after keydown
-    });
+window.addEventListener('keydown', function(event) {
+    if (event.key === '1') { //if key '1' is pressed
+        buttons.forEach(function(button) { //for each button in the array
+            button.classList.add('colors'); //toggles class on and off after keydown
+        });
+    }
 });
+
+window.addEventListener('keydown', function(event) {
+    if (event.key === '3') { 
+        buttons.forEach(function(button) { 
+            button.classList.add('colored'); 
+        });
+    }
+});
+
+window.addEventListener('keydown', function(event) {
+    if (event.key === '2') {  //if key '3' is pressed
+        buttons.forEach(function(button) {  
+            button.classList.remove('colors'); //removes class after keydown
+        });
+    }
+});
+
+window.addEventListener('keydown', function(event) {
+    if (event.key === '4') { 
+        buttons.forEach(function(button) { 
+            button.classList.remove('colored'); 
+        });
+    }
+});
+
 //Functions that toggle the class on and off for the animations
 //click function
 function shaker() { shake.classList.toggle('shaker') }
