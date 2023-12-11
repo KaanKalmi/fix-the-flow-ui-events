@@ -1,4 +1,4 @@
-/* Basic style */
+/* GENERAL STYLING */
 :root {
   --primary: #fff;
   --secondary: #050840;
@@ -30,28 +30,25 @@ a {
   margin: 0.2em;
   padding: 0.4em 0.8em;
   background: var(--secondary);
-  color: var(--highlight-primary);
   border: var(--line) solid var(--highlight-primary);
   border-radius: var(--pill);
   font-weight: normal;
   text-decoration: none;
   position: relative;
+  color: var(--secondary);
 }
 
-/*button coloring*/
+/*BUTTON COLORING*/
 a:nth-child(n+1):nth-child(-n+10) {
   background: var(--highlight-primary);
-  color: var(--secondary);
   border-color: var(--highlight-primary);
 }
 a:nth-child(n+11):nth-child(-n+18){
   background: var(--highlight-secondary);
-  color: var(--secondary);
   border-color: var(--highlight-secondary);
 }
 a:nth-child(n+19):nth-child(-n+20){
   background: var(--primary);
-  color: var(--secondary);
   border-color: var(--primary);
 }
 
