@@ -35,29 +35,21 @@ a {
   border-radius: var(--pill);
   font-weight: normal;
   text-decoration: none;
-}
-
-a:hover {
-  color: var(--primary);
-  border-color: var(--primary);
+  position: relative;
 }
 
 /*button coloring*/
-
 a:nth-child(n+1):nth-child(-n+10) {
-  position: relative;
   background: var(--highlight-primary);
   color: var(--secondary);
   border-color: var(--highlight-primary);
 }
 a:nth-child(n+11):nth-child(-n+18){
-  position: relative;
   background: var(--highlight-secondary);
   color: var(--secondary);
   border-color: var(--highlight-secondary);
 }
 a:nth-child(n+19):nth-child(-n+20){
-  position: relative;
   background: var(--primary);
   color: var(--secondary);
   border-color: var(--primary);
