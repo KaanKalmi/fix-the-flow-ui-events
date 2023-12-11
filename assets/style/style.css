@@ -29,28 +29,21 @@ a {
   display: inline-block;
   margin: 0.2em;
   padding: 0.4em 0.8em;
-  background: var(--secondary);
-  border: var(--line) solid var(--highlight-primary);
+  background: var(--highlight-secondary);
+  border: var(--line) solid var(--highlight-secondary);
   border-radius: var(--pill);
   font-weight: normal;
   text-decoration: none;
   position: relative;
-  color: var(--secondary);
+  color: var(--primary);
 }
 
-/*BUTTON COLORING*/
-a:nth-child(n+1):nth-child(-n+10) {
+/*DBLCLICK EVENTS*/
+.colored{
   background: var(--highlight-primary);
   border-color: var(--highlight-primary);
 }
-a:nth-child(n+11):nth-child(-n+18){
-  background: var(--highlight-secondary);
-  border-color: var(--highlight-secondary);
-}
-a:nth-child(n+19):nth-child(-n+20){
-  background: var(--primary);
-  border-color: var(--primary);
-}
+
 
 /*ANIMATIES EIGENSCHAPPEN*/
 .shaker { animation: shaker cubic-bezier(0.28, 0.84, 0.42, 1) .7s 1; }

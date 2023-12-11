@@ -19,6 +19,7 @@ let carti = document.querySelector('a:nth-of-type(18)') // selects the 18th a ta
 let travis = document.querySelector('a:nth-of-type(19)') // selects the 19th a tag WORKS
 let blubber = document.querySelector('a:nth-of-type(20)') // selects the 20th a tag WORKS
 
+
 //Shows in console if it picks the element up
 console.log(shake) // SHOWS
 console.log(alarm)  // SHOWS
@@ -40,6 +41,16 @@ console.log(switchteam) // SHOWS
 console.log(carti) // SHOWS
 console.log(travis) // SHOWS
 console.log(blubber) // SHOWS
+
+
+// listens for double click
+let dbl = document.querySelector('a:nth-of-type(1)')
+
+dbl.addEventListener('dblclick', colorone)
+console.log('double click registered')
+function colorone() {
+    dbl.classList.toggle('colorone')
+}
 
 // listens for click
 shake.addEventListener('click', shaker) 
