@@ -194,3 +194,29 @@ animation-iteration-count:100;
 50%{filter: brightness(50%); transform:skew(0deg);}
 100%{filter: brightness(0); transform:skew(120deg);}
 }
+
+/*animation*/
+a:nth-child(6){
+  position: relative;
+  background: var(--highlight-primary);
+  color: var(--secondary);
+  border-color: var(--highlight-primary);
+}
+
+.bouncer{
+  animation-name: bouncer;
+  animation-timing-function: ease-in-out;
+  animation-duration: .9s;
+  animation-iteration-count: 5;
+}
+
+@keyframes bouncer{
+  from, to { transform: scale(1, 1) translateY(0); }
+  25% { transform: scale(0.9, 1.1) translateY(-2px); }
+  40% { transform: scale(1.1, 0.9) translateY(0); }
+  50% { transform: scale(0.95, 1.05) translateY(-2px); }
+  60% { transform: scale(1.1, 0.9) translateY(2px); }
+  75% { transform: scale(0.9, 1.1) translateY(0); }
+  90% { transform: scale(0.95, 1.05) translateY(2px); }
+}
+
