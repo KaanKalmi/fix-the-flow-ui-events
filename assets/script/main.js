@@ -18,37 +18,8 @@ let switchteam = document.querySelector('a:nth-of-type(17)') // selects the 17th
 let carti = document.querySelector('a:nth-of-type(18)') // selects the 18th a tag WORKS
 let travis = document.querySelector('a:nth-of-type(19)') // selects the 19th a tag WORKS
 let blubber = document.querySelector('a:nth-of-type(20)') // selects the 20th a tag WORKS
-
-
-//Shows in console if it picks the element up
-console.log(shake) // SHOWS
-console.log(alarm)  // SHOWS
-console.log(bikelight) // SHOWS
-console.log(luffy) // SHOWS
-console.log(trip) // SHOWS
-console.log(bounce) // SHOWS
-console.log(floom) // SHOWS
-console.log(woosh) // SHOWS
-console.log(bye) // SHOWS
-console.log(heya) // SHOWS
-console.log(abducted) // SHOWS
-console.log(interaction) // SHOWS
-console.log(roll) // SHOWS
-console.log(zoom) // SHOWS
-console.log(weee) // SHOWS
-console.log(grappler) // SHOWS
-console.log(switchteam) // SHOWS
-console.log(carti) // SHOWS
-console.log(travis) // SHOWS
-console.log(blubber) // SHOWS
-
-
-// listens for double click **DOES NOT WORK BUT CODE IS CORRECT**
-let dbl = document.querySelector('a:nth-of-type(1)')
-console.log(dbl)
-dbl.addEventListener('dblclick', colored)
-function colored() { dbl.classList.toggle('colored') }
-
+let dbl = document.querySelector('a:nth-of-type(1)') // selects the 1st a tag WORKS
+let buttons = document.querySelectorAll('a'); // selects all a tags WORKS
 
 // listens for click
 shake.addEventListener('click', shaker) 
@@ -94,7 +65,17 @@ carti.addEventListener('animationend', what)
 travis.addEventListener('animationend', who)
 blubber.addEventListener('animationend', yuh)
 
+// listens for double click
+dbl.addEventListener('dblclick', colored)
+
+//listens for key press
+window.addEventListener('keydown', function() {
+    buttons.forEach(function(button) {
+        button.classList.toggle('colored'); //toggles class on and off after keydown
+    });
+});
 //Functions that toggle the class on and off for the animations
+//click function
 function shaker() { shake.classList.toggle('shaker') }
 function wobbler() { alarm.classList.toggle('wobbler') } 
 function blinker() { bikelight.classList.toggle('blinker') } 
@@ -115,3 +96,31 @@ function michaeljackson() { switchteam.classList.toggle('michaeljackson') }
 function what() { carti.classList.toggle('what') }
 function who() { travis.classList.toggle('who') }
 function yuh() { blubber.classList.toggle('yuh') }
+
+//dblclick function
+function colored() { dbl.classList.toggle('colored') }
+
+
+//Shows in console if it picks the element up
+console.log(shake) // SHOWS
+console.log(alarm)  // SHOWS
+console.log(bikelight) // SHOWS
+console.log(luffy) // SHOWS
+console.log(trip) // SHOWS
+console.log(bounce) // SHOWS
+console.log(floom) // SHOWS
+console.log(woosh) // SHOWS
+console.log(bye) // SHOWS
+console.log(heya) // SHOWS
+console.log(abducted) // SHOWS
+console.log(interaction) // SHOWS
+console.log(roll) // SHOWS
+console.log(zoom) // SHOWS
+console.log(weee) // SHOWS
+console.log(grappler) // SHOWS
+console.log(switchteam) // SHOWS
+console.log(carti) // SHOWS
+console.log(travis) // SHOWS
+console.log(blubber) // SHOWS
+console.log(dbl) // SHOWS
+console.log(buttons) // SHOWS

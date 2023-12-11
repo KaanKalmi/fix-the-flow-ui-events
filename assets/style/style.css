@@ -42,8 +42,14 @@ a {
 .colored{
   background-color: var(--highlight-primary);
   border-color: var(--highlight-primary);
+  color: var(--secondary);
 }
 
+.colors{
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: var(--secondary);
+}
 
 /*ANIMATIES EIGENSCHAPPEN*/
 .shaker { animation: shaker cubic-bezier(0.28, 0.84, 0.42, 1) .7s 1; }
