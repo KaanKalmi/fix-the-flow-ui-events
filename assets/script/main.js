@@ -1,3 +1,4 @@
+// selects an element and makes it a variable
 let shake = document.querySelector('a:nth-of-type(1)') // selects the 1st a tag WORKS
 let alarm = document.querySelector('a:nth-of-type(2)') // selects the 2nd a tag WORKS
 let bikelight = document.querySelector('a:nth-of-type(3)') // selects the 3rd a tag WORKS
@@ -126,7 +127,6 @@ function yuh() { blubber.classList.toggle('yuh') }
 
 //dblclick function
 function colored() { dbl.classList.toggle('colored') }
-
 
 //Shows in console if it picks the element up
 console.log(shake) // SHOWS
