@@ -40,7 +40,7 @@ a {
 
 /*DBLCLICK EVENTS*/
 .colored{
-  background: var(--highlight-primary);
+  background-color: var(--highlight-primary);
   border-color: var(--highlight-primary);
 }
 
