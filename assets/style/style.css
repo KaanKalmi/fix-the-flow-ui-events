@@ -44,15 +44,27 @@ a:hover {
 
 /*ANIMATIES*/
 
-a:nth-child(1) {
+a:nth-child(n+1):nth-child(-n+10) {
   position: relative;
   background: var(--highlight-primary);
   color: var(--secondary);
   border-color: var(--highlight-primary);
 }
+a:nth-child(n+11):nth-child(-n+18){
+  position: relative;
+  background: var(--highlight-secondary);
+  color: var(--secondary);
+  border-color: var(--highlight-secondary);
+}
+a:nth-child(n+19):nth-child(-n+20){
+  position: relative;
+  background: var(--primary);
+  color: var(--secondary);
+  border-color: var(--primary);
+}
 
 .shaker {
-  animation-name: shaker cubic-bezier(0.28, 0.84, 0.42, 1) .7s 1;
+  animation: shaker cubic-bezier(0.28, 0.84, 0.42, 1) .7s 1;
 }
 
 @keyframes shaker {
@@ -69,15 +81,8 @@ a:nth-child(1) {
   100% { transform: translate(0); }
 }
 
-a:nth-child(2) {
-  position: relative;
-  background: var(--highlight-primary);
-  color: var(--secondary);
-  border-color: var(--highlight-primary);
-}
-
 .wobbler {
-  animation-name: wobbler ease-in-out .6s 3;
+  animation: wobbler ease-in-out .6s 3;
 }
 
 @keyframes wobbler {
@@ -90,15 +95,8 @@ a:nth-child(2) {
   100% { transform: translateX(0%); }
 }
 
-a:nth-child(3) {
-  position: relative;
-  background: var(--highlight-primary);
-  color: var(--secondary);
-  border-color: var(--highlight-primary);
-}
-
 .blinker {
-  animation-name: blinker linear .25s 3;
+  animation: blinker linear .25s 3;
 }
 
 @keyframes blinker {
@@ -109,15 +107,8 @@ a:nth-child(3) {
   100% {opacity: 1; filter: brightness(200%);;}
 }
 
-a:nth-child(4){
-  position: relative;
-  background: var(--highlight-primary);
-  color: var(--secondary);
-  border-color: var(--highlight-primary);
-
-}
 .gomugomu{
-  animation-name: gomugomu ease-in-out .6s 1;
+  animation: gomugomu ease-in-out .6s 1;
 }
 
 @keyframes gomugomu {
@@ -129,15 +120,8 @@ a:nth-child(4){
   100%{ transform: scaleX(1) scaleY(1); }
 }
 
-a:nth-child(5){
-position:relative;
-background-color:var(--highlight-primary);
-color:var(--secondary);
-border-color:var(--highlight-primary);
-}
-
 .lowbattery{
-animation-name:lowbattery ease-in-out .6s 3;
+animation: lowbattery ease-in-out .6s 3;
 }
 
 @keyframes lowbattery{
@@ -146,15 +130,8 @@ animation-name:lowbattery ease-in-out .6s 3;
 100%{filter: brightness(100%); transform:skew(18deg);}
 }
 
-a:nth-child(6){
-  position: relative;
-  background: var(--highlight-primary);
-  color: var(--secondary);
-  border-color: var(--highlight-primary);
-}
-
 .bouncer{
-  animation-name: bouncer ease-in-out 1.2s 3;
+  animation: bouncer ease-in-out 1.2s 3;
 }
 
 @keyframes bouncer {
@@ -165,28 +142,14 @@ a:nth-child(6){
   45% { transform: scale(1); animation-timing-function: ease-out; }
 }
 
-a:nth-child(7){
-  position: relative;
-  background: var(--highlight-primary);
-  color: var(--secondary);
-  border-color: var(--highlight-primary);
-}
-
 .rotate{
-  animation:rotate .6s ease-in-out 2 alternate both;
+  animation: rotate .6s ease-in-out 2 alternate both;
 }
 
 @keyframes rotate
 {
   0%{ transform:rotate(0) }
   100%{ transform:rotate(360deg) }
-}
-
-a:nth-child(8){
-  position: relative;
-  background: var(--highlight-primary);
-  color: var(--secondary);
-  border-color: var(--highlight-primary);
 }
 
 .disappear{
@@ -200,13 +163,6 @@ a:nth-child(8){
   100%{opacity:0} 
 }
 
-a:nth-child(9){
-  position: relative;
-  background: var(--highlight-primary);
-  color: var(--secondary);
-  border-color: var(--highlight-primary);
-}
-
 .blurredout{
   animation: blurredout 1s ease-in-out 1;
 }
@@ -214,13 +170,6 @@ a:nth-child(9){
 @keyframes blurredout {
   0% { filter: blur(0.01); }
   100% { letter-spacing: -0.5em; filter: blur(12px) opacity(0%); }
-}
-
-a:nth-child(10){
-  position: relative;
-  background: var(--highlight-primary);
-  color: var(--secondary);
-  border-color: var(--highlight-primary);
 }
 
 .hello{
@@ -232,12 +181,6 @@ a:nth-child(10){
   100% { filter: blur(0px); opacity: 1; }
 }
 
-a:nth-child(11){
-  position: relative;
-  background: var(--highlight-secondary);
-  color: var(--secondary);
-  border-color: var(--highlight-secondary);
-}
 
 .rideOut {
 	animation: rideOut 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
@@ -248,15 +191,8 @@ a:nth-child(11){
   100% { transform: translateY(-1000px); opacity: 0; }
 }
 
-a:nth-of-type(12) {
-  position: relative;
-  background: var(--highlight-secondary);
-  color: var(--secondary);
-  border-color: var(--secondary);
-}
-
 .jump {
-  animation-name: jump cubic-bezier(0.28, 0.84, 0.42, 1) 1.2s 1;
+  animation: jump cubic-bezier(0.28, 0.84, 0.42, 1) 1.2s 1;
 }
 
 @keyframes jump {
@@ -269,15 +205,8 @@ a:nth-of-type(12) {
   100% { transform: scale(1, 1) translateY(0);}
 }
 
-a:nth-child(13){
-  position: relative;
-  background: var(--highlight-secondary);
-  color: var(--secondary);
-  border-color: var(--highlight-secondary);
-}
-
 .barrelroll {
-	animation-name: barrelroll 0.8s both;
+	animation: barrelroll 0.8s both;
 }
 
 @keyframes barrelroll {
@@ -285,15 +214,8 @@ a:nth-child(13){
   100% { transform: translateX(750px) rotate(540deg); opacity: 0; }
 }
 
-a:nth-child(14){
-  position: relative;
-  background: var(--highlight-secondary);
-  color: var(--secondary);
-  border-color: var(--highlight-secondary);
-}
-
 .wave {
-	animation-name: wave 1.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both 2;
+	animation: wave 1.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both 2;
 }
 
 @keyframes wave {
@@ -305,13 +227,6 @@ a:nth-child(14){
   90% { transform: rotate(4deg); }
 }
 
-a:nth-child(15){
-  position: relative;
-  background: var(--highlight-secondary);
-  color: var(--secondary);
-  border-color: var(--highlight-secondary);
-}
-
 .swirl {
 	animation: swirl 1s ease-in both;
 }
@@ -321,12 +236,6 @@ a:nth-child(15){
   100% { transform: rotate(-540deg) scale(0); transform-origin: 100% 100%; opacity: 0; }
 }
 
-a:nth-child(16){
-  position: relative;
-  background: var(--highlight-secondary);
-  color: var(--secondary);
-  border-color: var(--highlight-secondary);
-}
 
 .pulled {
 	animation: pulled 1.5s both;
@@ -344,30 +253,40 @@ a:nth-child(16){
   100% { transform: translateY(1000px); animation-timing-function: ease-in; opacity: 0; }
 }
 
-a:nth-child(17){
-  position: relative;
-  background: var(--highlight-secondary);
-  color: var(--secondary);
-  border-color: var(--highlight-secondary);
+.michaeljackson {
+	animation: michaeljackson 1.3s linear 1;
 }
 
-a:nth-child(18){
-  position: relative;
-  background: var(--highlight-secondary);
-  color: var(--secondary);
-  border-color: var(--highlight-secondary);
+@keyframes michaeljackson{
+  0% { background:#9d7beb; border-color: #9d7beb; }
+  30%,100% { background:#7ce7c9; border-color: #7ce7c9; }
 }
 
-a:nth-child(19){
-  position: relative;
-  background: var(--primary);
-  color: var(--secondary);
-  border-color: var(--primary);
+.what{
+  animation: what 2s ease-in-out 1;
 }
 
-a:nth-child(20){
-  position: relative;
-  background: var(--primary);
-  color: var(--secondary);
-  border-color: var(--primary);
+@keyframes what { 
+  0%, 100% { transform: rotate(0deg) translateX(0px) rotate(0deg); } 
+  25% { transform: rotate(-360deg) translateX(75px) rotate(360deg); } 
+  75% { transform: rotate(360deg) translateX(0px) rotate(-360deg); }
+} 
+
+.who{
+  animation: who 1s ease-in-out 1;
+}
+
+@keyframes who{
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(-1440deg); }
+}
+
+.yuh{
+  animation: yuh 1s ease-in-out 1;
+}
+
+@keyframes yuh{
+  0% { filter: blur(0px) invert(0); }
+  50% { filter: blur(10px) invert(1); }
+  100% { filter: blur(0px) invert(0); }
 }
