@@ -206,17 +206,65 @@ a:nth-child(6){
 .bouncer{
   animation-name: bouncer;
   animation-timing-function: ease-in-out;
-  animation-duration: .9s;
-  animation-iteration-count: 5;
+  animation-duration: 1.2s;
+  animation-iteration-count: 3;
 }
 
-@keyframes bouncer{
-  from, to { transform: scale(1, 1) translateY(0); }
-  25% { transform: scale(0.9, 1.1) translateY(-2px); }
-  40% { transform: scale(1.1, 0.9) translateY(0); }
-  50% { transform: scale(0.95, 1.05) translateY(-2px); }
-  60% { transform: scale(1.1, 0.9) translateY(2px); }
-  75% { transform: scale(0.9, 1.1) translateY(0); }
-  90% { transform: scale(0.95, 1.05) translateY(2px); }
+@keyframes bouncer {
+  from {
+    transform: scale(1);
+    transform-origin: center center;
+    animation-timing-function: ease-out;
+  }
+  10% {
+    transform: scale(0.91);
+    animation-timing-function: ease-in;
+  }
+  17% {
+    transform: scale(0.98);
+    animation-timing-function: ease-out;
+  }
+  33% {
+    transform: scale(0.87);
+    animation-timing-function: ease-in;
+  }
+  45% {
+    transform: scale(1);
+    animation-timing-function: ease-out;
+  }
 }
 
+a:nth-child(7){
+  position: relative;
+  background: var(--highlight-primary);
+  color: var(--secondary);
+  border-color: var(--highlight-primary);
+}
+
+.rotate{
+  animation:rotate .6s ease-in-out 2 alternate both
+}
+
+@keyframes rotate
+{
+  0%{transform:rotate(0)}
+  100%{transform:rotate(360deg)}
+}
+
+a:nth-child(8){
+  position: relative;
+  background: var(--highlight-primary);
+  color: var(--secondary);
+  border-color: var(--highlight-primary);
+}
+
+.disappear{
+  animation: disappear 1s ease-in-out 1
+}
+
+@keyframes disappear
+{
+  0%{opacity:1}
+  15% {opacity: 1;}
+  100%{opacity:0}
+}
