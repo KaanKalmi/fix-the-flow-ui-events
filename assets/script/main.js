@@ -1,14 +1,3 @@
-let interaction = document.querySelector('a:nth-of-type(12)') // selects the 12th a tag
-
-console.log(interaction)  // shows in console
-
-interaction.addEventListener('click', jumpHandler) // listens for click
-interaction.addEventListener('animationend', jumpHandler) // listens for animation end
-
-function jumpHandler() { 
-  interaction.classList.toggle('jump') // toggles the class jump
-}
-
 let shake = document.querySelector('a:nth-of-type(1)') // selects the 1st a tag
 
 console.log(shake) // shows in console
@@ -31,26 +20,26 @@ function wobbler() {
   wobble.classList.toggle('wobbler') // toggles the class wobbler
 } 
 
-let blink = document.querySelector('a:nth-of-type(3)') // selects the 3rd a tag
+let epileptic = document.querySelector('a:nth-of-type(3)') // selects the 3rd a tag
  
-console.log(blink) // shows in console
+console.log(epileptic) // shows in console
 
-blink.addEventListener('click', blinker)  // listens for click
-blink.addEventListener('animationend', blinker) // listens for animation end
+epileptic.addEventListener('click', blinker)  // listens for click
+epileptic.addEventListener('animationend', blinker) // listens for animation end
 
 function blinker() {
-  blink.classList.toggle('blinker') // toggles the class blinker
+  epileptic.classList.toggle('blinker') // toggles the class blinker
 } 
 
-let rubberband = document.querySelector('a:nth-of-type(4)') // selects the 4th a tag
+let ecstatic = document.querySelector('a:nth-of-type(4)') // selects the 4th a tag
 
-console.log(rubberband) // shows in console
+console.log(ecstatic) // shows in console
 
-rubberband.addEventListener('click', rubberbanding)  // listens for click
-rubberband.addEventListener('animationend', rubberbanding) // listens for animation end
+ecstatic.addEventListener('click', rubberbanding)  // listens for click
+ecstatic.addEventListener('animationend', rubberbanding) // listens for animation end
 
 function rubberbanding() {
-  rubberband.classList.toggle('rubberbanding') // toggles the class rubberbanding
+  ecstatic.classList.toggle('rubberbanding') // toggles the class rubberbanding
 }
 
 let trip = document.querySelector('a:nth-of-type(5)') // selects the 5th a tag
@@ -95,4 +84,48 @@ woosh.addEventListener('animationend', disappear) // listens for animation end
 
 function disappear() {
   woosh.classList.toggle('disappear') // toggles the class disappear
+}
+
+let bye = document.querySelector('a:nth-of-type(9)') // selects the 9th a tag
+
+console.log(bye) // shows in console
+
+bye.addEventListener('click', blurredout) // listens for click
+bye.addEventListener('animationend', blurredout) // listens for animation end
+
+function blurredout() {
+  bye.classList.toggle('blurredout') // toggles the class blurredout
+}
+
+let heya = document.querySelector('a:nth-of-type(10)') // selects the 10th a tag
+
+console.log(heya) // shows in console
+
+heya.addEventListener('click', hello) // listens for click
+heya.addEventListener('animationend', hello) // listens for animation end
+
+function hello() {
+  heya.classList.toggle('hello') // toggles the class hello
+}
+
+let abducted = document.querySelector('a:nth-of-type(11)') // selects the 11th a tag
+
+console.log(zoomzoom) // shows in console
+
+abducted.addEventListener('click', rideOut) // listens for click
+abducted.addEventListener('animationend', rideOut) // listens for animation end
+
+function rideOut() {
+  abducted.classList.toggle('rideOut') // toggles the class rideOut
+}
+
+let interaction = document.querySelector('a:nth-of-type(12)') // selects the 12th a tag
+
+console.log(interaction)  // shows in console
+
+interaction.addEventListener('click', jumpHandler) // listens for click
+interaction.addEventListener('animationend', jumpHandler) // listens for animation end
+
+function jumpHandler() { 
+  interaction.classList.toggle('jump') // toggles the class jump
 }

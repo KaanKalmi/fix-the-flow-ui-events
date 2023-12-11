@@ -42,36 +42,7 @@ a:hover {
   border-color: var(--primary);
 }
 
-/* UI Event Classes */
 
-/* Jump animation on the interaction link */
-a:nth-of-type(12) {
-  position: relative;
-  background: var(--highlight-secondary);
-  color: var(--secondary);
-  border-color: var(--secondary);
-}
-
-.jump {
-  animation-name: jump;
-  animation-timing-function: cubic-bezier(0.28, 0.84, 0.42, 1);
-  animation-duration: 1.2s;
-  animation-iteration-count: 1;
-}
-
-@keyframes jump {
-  0% {transform: scale(1, 1) translateY(0);}
-  10% {transform: scale(1.1, 0.9) translateY(0);}
-  30% {transform: scale(0.9, 1.1) translateY(-5rem) rotate(10deg);}
-  50% {transform: scale(1.05, 0.95) translateY(0);}
-  57% {transform: scale(1, 1) translateY(-0.5rem) rotate(-2deg);}
-  64% {transform: scale(1, 1) translateY(0);}
-  100% {transform: scale(1, 1) translateY(0);}
-}
-
-/* Jouw animaties */
-
-/* shake */
 a:nth-child(1) {
   position: relative;
   background: var(--highlight-primary);
@@ -107,7 +78,6 @@ a:nth-child(2) {
   border-color: var(--highlight-primary);
 }
 
-/* wobble */
 .wobbler {
   animation-name: wobbler;
   animation-timing-function: ease-in-out;
@@ -124,8 +94,6 @@ a:nth-child(2) {
   75% {transform: translateX(-5%) rotate(-1deg);}
   100% {transform: translateX(0%);}
 }
-
-/*blinking*/
 
 a:nth-child(3) {
   position: relative;
@@ -149,7 +117,6 @@ a:nth-child(3) {
   100% {opacity: 1; filter: brightness(200%); transform: translate(15px, -15px);}
 }
 
-/*rubberbanding*/
 a:nth-child(4){
   position: relative;
   background: var(--highlight-primary);
@@ -174,7 +141,6 @@ a:nth-child(4){
   100%{transform: scaleX(1) scaleY(1);}
 }
 
-/*acid trip*/
 a:nth-child(5){
 position:relative;
 background-color:var(--highlight-primary);
@@ -195,7 +161,6 @@ animation-iteration-count:100;
 100%{filter: brightness(0); transform:skew(120deg);}
 }
 
-/*animation*/
 a:nth-child(6){
   position: relative;
   background: var(--highlight-primary);
@@ -267,4 +232,93 @@ a:nth-child(8){
   0%{opacity:1}
   15% {opacity: 1;}
   100%{opacity:0}
+}
+
+a:nth-child(9){
+  position: relative;
+  background: var(--highlight-primary);
+  color: var(--secondary);
+  border-color: var(--highlight-primary);
+}
+
+.blurredout{
+  animation: blurredout 1s ease-in-out 1
+}
+
+@keyframes blurredout {
+  0% {
+    filter: blur(0.01);
+  }
+  100% {
+    letter-spacing: -0.5em;
+    filter: blur(12px) opacity(0%);
+  }
+}
+
+a:nth-child(10){
+  position: relative;
+  background: var(--highlight-primary);
+  color: var(--secondary);
+  border-color: var(--highlight-primary);
+}
+
+.hello{
+  animation: hello 1s ease-in-out 1
+}
+
+@keyframes hello {
+  0% {
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+a:nth-child(11){
+  position: relative;
+  background: var(--highlight-primary);
+  color: var(--secondary);
+  border-color: var(--highlight-primary);
+}
+
+.rideOut {
+	animation: rideOut 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+@keyframes rideOut {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-1000px);
+    opacity: 0;
+  }
+}
+
+a:nth-of-type(12) {
+  position: relative;
+  background: var(--highlight-secondary);
+  color: var(--secondary);
+  border-color: var(--secondary);
+}
+
+.jump {
+  animation-name: jump;
+  animation-timing-function: cubic-bezier(0.28, 0.84, 0.42, 1);
+  animation-duration: 1.2s;
+  animation-iteration-count: 1;
+}
+
+@keyframes jump {
+  0% {transform: scale(1, 1) translateY(0);}
+  10% {transform: scale(1.1, 0.9) translateY(0);}
+  30% {transform: scale(0.9, 1.1) translateY(-5rem) rotate(10deg);}
+  50% {transform: scale(1.05, 0.95) translateY(0);}
+  57% {transform: scale(1, 1) translateY(-0.5rem) rotate(-2deg);}
+  64% {transform: scale(1, 1) translateY(0);}
+  100% {transform: scale(1, 1) translateY(0);}
 }
