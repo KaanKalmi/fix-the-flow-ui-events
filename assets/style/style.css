@@ -42,7 +42,7 @@ a:hover {
   border-color: var(--primary);
 }
 
-/*ANIMATIES*/
+/*button coloring*/
 
 a:nth-child(n+1):nth-child(-n+10) {
   position: relative;
@@ -63,230 +63,88 @@ a:nth-child(n+19):nth-child(-n+20){
   border-color: var(--primary);
 }
 
-.shaker {
-  animation: shaker cubic-bezier(0.28, 0.84, 0.42, 1) .7s 1;
-}
+/*ANIMATIES EIGENSCHAPPEN*/
+.shaker { animation: shaker cubic-bezier(0.28, 0.84, 0.42, 1) .7s 1; }
+.wobbler { animation: wobbler ease-in-out .6s 3; }
+.blinker { animation: blinker linear .25s 3; }
+.gomugomu{ animation: gomugomu ease-in-out .6s 1; }
+.lowbattery{ animation: lowbattery ease-in-out .6s 3; }
+.bouncer{ animation: bouncer ease-in-out 1.2s 3; }
+.rotate{ animation: rotate .6s ease-in-out 2 alternate both; }
+.disappear{ animation: disappear 1s ease-in-out 1; }
+.blurredout{ animation: blurredout 1s ease-in-out 1; }
+.hello{ animation: hello 1s ease-in-out 1; }
+.rideOut { animation: rideOut 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both; }
+.jump {animation: jump cubic-bezier(0.28, 0.84, 0.42, 1) 1.2s 1; }
+.barrelroll { animation: barrelroll 0.8s both; }
+.wave { animation: wave 1.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both 2; }
+.swirl { animation: swirl 1s ease-in both; }
+.pulled { animation: pulled 1.5s both; }
+.michaeljackson { animation: michaeljackson 1.3s linear 1; }
+.what{ animation: what 2s ease-in-out 1; }
+.who{ animation: who 1s ease-in-out 1; }
+.yuh{ animation: yuh 1s ease-in-out 1; }
 
+/*KEYFRAMES VOOR ANIMATIES*/
 @keyframes shaker {
-  0% { transform: translate(0);}
-  10% { transform: translate(-5px, -5px); }
-  20% { transform: translate(5px, -5px); }
-  30% { transform: translate(-5px, 5px); }
-  40% { transform: translate(5px, 5px); }
-  50% { transform: translate(-5px, -5px); }
-  60% { transform: translate(5px, -5px); }
-  70% { transform: translate(-5px, 5px); }
-  80% { transform: translate(-5px, -5px); }
-  90% { transform: translate(5px, -5px); }
-  100% { transform: translate(0); }
-}
-
-.wobbler {
-  animation: wobbler ease-in-out .6s 3;
+  0%,100% { transform: translate(0); } 10%, 50%, 80% { transform: translate(-5px, -5px); } 20%, 60%, 90% { transform: translate(5px, -5px); }
+  30%,70% { transform: translate(-5px, 5px); } 40% { transform: translate(5px, 5px); }
 }
 
 @keyframes wobbler {
-  0% { transform: translateX(0%); }
-  15% { transform: translateX(-20%) rotate(-5deg); }
-  30% { transform: translateX(15%) rotate(3deg); }
-  45% { transform: translateX(-10%) rotate(-3deg); }
-  60% { transform: translateX(5%) rotate(2deg); }
-  75% { transform: translateX(-2%) rotate(-1deg); }
-  100% { transform: translateX(0%); }
+  0%,100% { transform: translateX(0%); } 15% { transform: translateX(-20%) rotate(-5deg); } 30% { transform: translateX(15%) rotate(3deg); } 45% { transform: translateX(-10%) rotate(-3deg); }
+  60% { transform: translateX(5%) rotate(2deg); }  75% { transform: translateX(-2%) rotate(-1deg); } 
 }
 
-.blinker {
-  animation: blinker linear .25s 3;
-}
-
-@keyframes blinker {
-  0% {opacity: 1; filter: brightness(200%);;}
-  25% {opacity: 0;}
-  50% {opacity: 1;  filter: brightness(200%);}
-  75% {opacity: 0;}
-  100% {opacity: 1; filter: brightness(200%);;}
-}
-
-.gomugomu{
-  animation: gomugomu ease-in-out .6s 1;
-}
+@keyframes blinker { 0% {opacity: 1; filter: brightness(200%);} 25% {opacity: 0;} 50% {opacity: 1;  filter: brightness(200%);} 75% {opacity: 0;} 100% {opacity: 1; filter: brightness(200%);;} }
 
 @keyframes gomugomu {
-  0%{ transform: scaleX(1);}
-  40%{ transform: scaleX(1.4) scaleY(0.25); }
-  50%{ transform: scaleX(0.25) scaleY(1.4); }
-  60%{ transform: scaleX(1.4) scaleY(0.25); }
-  85%{ transform: scaleX(0.25)  scaleY(1.4); }
-  100%{ transform: scaleX(1) scaleY(1); }
+  0%{ transform: scaleX(1);} 40%{ transform: scaleX(1.4) scaleY(0.25); } 50%{ transform: scaleX(0.25) scaleY(1.4); }
+  60%{ transform: scaleX(1.4) scaleY(0.25); } 85%{ transform: scaleX(0.25)  scaleY(1.4); } 100%{ transform: scaleX(1) scaleY(1); }
 }
 
-.lowbattery{
-animation: lowbattery ease-in-out .6s 3;
-}
-
-@keyframes lowbattery{
-0%{filter: brightness(100%); transform:skew(18deg);}
-50%{filter: brightness(25%); transform:skew(-18deg);}
-100%{filter: brightness(100%); transform:skew(18deg);}
-}
-
-.bouncer{
-  animation: bouncer ease-in-out 1.2s 3;
-}
+@keyframes lowbattery { 0%,100% { filter: brightness(100%); transform:skew(18deg); } 50% { filter: brightness(25%); transform:skew(-18deg); } }
 
 @keyframes bouncer {
-  from { transform: scale(1); transform-origin: center center; animation-timing-function: ease-out; }
-  10% {transform: scale(0.91);animation-timing-function: ease-in; }
-  17% { transform: scale(0.98); animation-timing-function: ease-out; }
-  33% { transform: scale(0.87); animation-timing-function: ease-in; }
+  0% { transform: scale(1); transform-origin: center center; animation-timing-function: ease-out; } 10% { transform: scale(0.91);animation-timing-function: ease-in; }
+  17% { transform: scale(0.98); animation-timing-function: ease-out; } 33% { transform: scale(0.87); animation-timing-function: ease-in; }
   45% { transform: scale(1); animation-timing-function: ease-out; }
 }
 
-.rotate{
-  animation: rotate .6s ease-in-out 2 alternate both;
+@keyframes rotate { 0%{ transform:rotate(0) } 100%{ transform:rotate(360deg) } }
+
+@keyframes disappear { 0%{ opacity:1; } 15% { opacity: 1; } 100%{ opacity:0; }  }
+
+@keyframes blurredout { 0% { filter: blur(0.01); }100% { letter-spacing: -0.5em; filter: blur(12px) opacity(0%); } }
+
+@keyframes hello { 0% { filter: blur(12px); opacity: 0; } 100% { filter: blur(0px); opacity: 1; } }
+
+@keyframes rideOut { 0% { transform: translateY(0); opacity: 1; } 100% { transform: translateY(-1000px); opacity: 0; } }
+
+@keyframes jump { 0%, 100% { transform: scale(1, 1) translateY(0); } 10% { transform: scale(1.1, 0.9) translateY(0); }30% { transform: scale(0.9, 1.1) translateY(-5rem) rotate(10deg); } 
+  50% { transform: scale(1.05, 0.95) translateY(0); }57% { transform: scale(1, 1) translateY(-0.5rem) rotate(-2deg); } 64% { transform: scale(1, 1) translateY(0); }
 }
 
-@keyframes rotate
-{
-  0%{ transform:rotate(0) }
-  100%{ transform:rotate(360deg) }
+@keyframes barrelroll { 0% { transform: translateX(0) rotate(0deg); opacity: 1; } 100% { transform: translateX(750px) rotate(540deg); opacity: 0; } }
+
+@keyframes wave { 0%, 100% { transform: rotate(0deg); transform-origin: 0 50%; } 10% { transform: rotate(4deg); } 20%, 40%,60% { transform: rotate(-32deg); }
+  30%, 50%, 70% { transform: rotate(8deg); } 80% { transform: rotate(-4deg); } 90% { transform: rotate(4deg); }
 }
 
-.disappear{
-  animation: disappear 1s ease-in-out 1;
+@keyframes swirl { 0% { transform: rotate(0) scale(1); transform-origin: 100% 100%; opacity: 1; } 100% { transform: rotate(-540deg) scale(0); transform-origin: 100% 100%; opacity: 0; } }
+
+@keyframes pulled {0% { transform: translateY(0); animation-timing-function: ease-out; } 5% { transform: translateY(40px); animation-timing-function: ease-in; }
+  15% { transform: translateY(0); animation-timing-function: ease-out; } 25% { transform: translateY(90px); animation-timing-function: ease-in; }
+  38% { transform: translateY(0); animation-timing-function: ease-out;} 52% { transform: translateY(175px); animation-timing-function: ease-in; }
+  70% { transform: translateY(0); animation-timing-function: ease-out; } 85% { opacity: 1; } 100% { transform: translateY(1000px); animation-timing-function: ease-in; opacity: 0; }
 }
 
-@keyframes disappear
-{
-  0%{opacity:1} 
-  15% {opacity: 1;} 
-  100%{opacity:0} 
-}
+@keyframes michaeljackson { 0% { background:#9d7beb; border-color: #9d7beb; } 30%,100% { background:#7ce7c9; border-color: #7ce7c9; } }
 
-.blurredout{
-  animation: blurredout 1s ease-in-out 1;
-}
-
-@keyframes blurredout {
-  0% { filter: blur(0.01); }
-  100% { letter-spacing: -0.5em; filter: blur(12px) opacity(0%); }
-}
-
-.hello{
-  animation: hello 1s ease-in-out 1;
-}
-
-@keyframes hello {
-  0% { filter: blur(12px); opacity: 0; }
-  100% { filter: blur(0px); opacity: 1; }
-}
-
-
-.rideOut {
-	animation: rideOut 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-}
-
-@keyframes rideOut {
-  0% { transform: translateY(0); opacity: 1; }
-  100% { transform: translateY(-1000px); opacity: 0; }
-}
-
-.jump {
-  animation: jump cubic-bezier(0.28, 0.84, 0.42, 1) 1.2s 1;
-}
-
-@keyframes jump {
-  0% { transform: scale(1, 1) translateY(0);}
-  10% { transform: scale(1.1, 0.9) translateY(0);}
-  30% { transform: scale(0.9, 1.1) translateY(-5rem) rotate(10deg);}
-  50% { transform: scale(1.05, 0.95) translateY(0);}
-  57% { transform: scale(1, 1) translateY(-0.5rem) rotate(-2deg);}
-  64% { transform: scale(1, 1) translateY(0);}
-  100% { transform: scale(1, 1) translateY(0);}
-}
-
-.barrelroll {
-	animation: barrelroll 0.8s both;
-}
-
-@keyframes barrelroll {
-  0% { transform: translateX(0) rotate(0deg); opacity: 1; }
-  100% { transform: translateX(750px) rotate(540deg); opacity: 0; }
-}
-
-.wave {
-	animation: wave 1.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both 2;
-}
-
-@keyframes wave {
-  0%, 100% { transform: rotate(0deg); transform-origin: 0 50%; }
-  10% { transform: rotate(4deg); }
-  20%, 40%,60% { transform: rotate(-32deg); }
-  30%, 50%, 70% { transform: rotate(8deg); }
-  80% { transform: rotate(-4deg); }
-  90% { transform: rotate(4deg); }
-}
-
-.swirl {
-	animation: swirl 1s ease-in both;
-}
-
-@keyframes swirl {
-  0% { transform: rotate(0) scale(1); transform-origin: 100% 100%; opacity: 1; }
-  100% { transform: rotate(-540deg) scale(0); transform-origin: 100% 100%; opacity: 0; }
-}
-
-
-.pulled {
-	animation: pulled 1.5s both;
-}
-
-@keyframes pulled{
-  0% { transform: translateY(0); animation-timing-function: ease-out; }
-  5% { transform: translateY(40px); animation-timing-function: ease-in; }
-  15% { transform: translateY(0); animation-timing-function: ease-out; }
-  25% { transform: translateY(90px); animation-timing-function: ease-in; }
-  38% { transform: translateY(0); animation-timing-function: ease-out;}
-  52% { transform: translateY(175px); animation-timing-function: ease-in; }
-  70% { transform: translateY(0); animation-timing-function: ease-out; }
-  85% { opacity: 1; }
-  100% { transform: translateY(1000px); animation-timing-function: ease-in; opacity: 0; }
-}
-
-.michaeljackson {
-	animation: michaeljackson 1.3s linear 1;
-}
-
-@keyframes michaeljackson{
-  0% { background:#9d7beb; border-color: #9d7beb; }
-  30%,100% { background:#7ce7c9; border-color: #7ce7c9; }
-}
-
-.what{
-  animation: what 2s ease-in-out 1;
-}
-
-@keyframes what { 
-  0%, 100% { transform: rotate(0deg) translateX(0px) rotate(0deg); } 
-  25% { transform: rotate(-360deg) translateX(75px) rotate(360deg); } 
+@keyframes what {  0%, 100% { transform: rotate(0deg) translateX(0px) rotate(0deg); }  25% { transform: rotate(-360deg) translateX(75px) rotate(360deg); }
   75% { transform: rotate(360deg) translateX(0px) rotate(-360deg); }
 } 
 
-.who{
-  animation: who 1s ease-in-out 1;
-}
+@keyframes who { 0% { transform: rotate(0deg); } 100% { transform: rotate(-1440deg); } }
 
-@keyframes who{
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(-1440deg); }
-}
-
-.yuh{
-  animation: yuh 1s ease-in-out 1;
-}
-
-@keyframes yuh{
-  0% { filter: blur(0px) invert(0); }
-  50% { filter: blur(10px) invert(1); }
-  100% { filter: blur(0px) invert(0); }
-}
+@keyframes yuh { 0%, 100% { filter: blur(0px) invert(0); } 50% { filter: blur(10px) invert(1); } }
