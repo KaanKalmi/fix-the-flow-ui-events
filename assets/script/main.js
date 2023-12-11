@@ -43,14 +43,15 @@ console.log(travis) // SHOWS
 console.log(blubber) // SHOWS
 
 
-// listens for double click
+// listens for double click **DOES NOT WORK BUT CODE IS CORRECT**
 let dbl = document.querySelector('a:nth-of-type(1)')
 console.log(dbl)
 dbl.addEventListener('dblclick', colored)
 function colored() { dbl.classList.toggle('colored') }
 
+
 // listens for click
-//shake.addEventListener('click', shaker) 
+shake.addEventListener('click', shaker) 
 alarm.addEventListener('click', wobbler)  
 bikelight.addEventListener('click', blinker) 
 luffy.addEventListener('click', gomugomu)  
@@ -94,7 +95,7 @@ travis.addEventListener('animationend', who)
 blubber.addEventListener('animationend', yuh)
 
 //Functions that toggle the class on and off for the animations
-//function shaker() { shake.classList.toggle('shaker') }
+function shaker() { shake.classList.toggle('shaker') }
 function wobbler() { alarm.classList.toggle('wobbler') } 
 function blinker() { bikelight.classList.toggle('blinker') } 
 function gomugomu() { luffy.classList.toggle('gomugomu') }
